@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="hero" aria-labelledby="intro-title">
+  <div class="hero-copy">
+    <h1 id="intro-title">Hey, I’m Youssef<span class="accent">.</span><br>Curiosity meets<br><span class="muted-heading">engineering.</span></h1>
+    <p class="hero-description">I explore how software is built, shipped, and kept running and write about what I learn along the way.</p>
+    <a class="button" href="#writing">Explore my writing <span aria-hidden="true">↗</span></a>
+    <div class="social-links" aria-label="Connect with Youssef"><a href="https://github.com/gryoussef">GitHub ↗</a><a href="https://www.linkedin.com/in/gryoussef/">LinkedIn ↗</a><a href="mailto:youssef.jirari@gmail.com">Say hello ↗</a></div>
+  </div>
+  <figure class="portrait"><div class="portrait-frame"><img src="{{ "images/youssef-cutout.png" | relURL }}" alt="{{ .Site.Params.AvatarAltText }}" width="1448" height="1086" fetchpriority="high"></div><figcaption><span>Youssef El Jirari</span><span>DevOps &amp; Platform Engineer</span></figcaption></figure>
+</section>
+<div class="interest-strip"><span>Things I think about</span><div><span>DevOps</span><span>Cloud</span><span>Software engineering</span><span>Learning in public</span></div></div>
+<section id="writing" class="writing-section" aria-labelledby="writing-title">
+  <div class="section-heading"><div><p class="eyebrow">The notebook</p><h2 id="writing-title">A few things I’ve learned.</h2></div><a class="text-link" href="{{ "posts/" | relURL }}">All writing <span aria-hidden="true">↗</span></a></div>
+  {{ range (where .Site.RegularPages "Section" "posts") }}{{ partial "post-row.html" . }}{{ else }}<p>New notes are on their way. Come back soon.</p>{{ end }}
+</section>
+<section class="contact"><div><h2>Good ideas start<br>with a conversation<span class="accent">.</span></h2><p>Have a question, an idea, or a story to share? I’d love to hear it.</p></div><a class="button button-outline" href="mailto:youssef.jirari@gmail.com">Let’s connect <span aria-hidden="true">↗</span></a></section>
+{{ end }}

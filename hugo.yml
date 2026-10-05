@@ -1,17 +1,16 @@
-baseURL: 'https://devopsbro.tech'
-title: DevOps Bro
-theme: gokarna
+baseURL: 'https://eljirari.me'
+title: Youssef El Jirari
 languageCode: en
 defaultContentLanguage: en
 enableEmoji: true
 enableRobotsTXT: true
 pygmentsStyle: monokai
 params:
-  footer: DevOps Bro
-  name: Holà 👋, Youssef is here! 
-  description: Come along on my tech journey as a lifelong learner! 🌌 I'll be sharing real stories and insights about DevOps, cloud, and software engineering. 💻 Let's explore and learn together!
-  avatarURL: /images/avatar.jpg
-  AvatarAltText: avatar
+  footer: Youssef El Jirari
+  name: Youssef El Jirari
+  description: Notes from my journey through DevOps, cloud, and software engineering. Real stories, useful ideas, and things learned along the way.
+  avatarURL: /images/youssef.jpg
+  AvatarAltText: Portrait of Youssef El Jirari
   avatarSize: size-l
   accentColor: "#FF4400"
   showPostsOnHomePage: popular

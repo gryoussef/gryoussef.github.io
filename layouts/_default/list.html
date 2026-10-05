@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="page-intro"><p class="eyebrow">{{ if eq .Kind "term" }}Browse the notebook{{ else }}The notebook{{ end }}</p><h1>{{ if eq .Section "posts" }}Writing<span class="accent">.</span>{{ else if and (eq .Kind "taxonomy") (eq .Data.Plural "tags") }}Topics<span class="accent">.</span>{{ else }}{{ .Title }}<span class="accent">.</span>{{ end }}</h1><p>Stories, ideas, and lessons from building software.</p></section>
+{{ if eq .Kind "taxonomy" }}<div class="topic-list">{{ range .Data.Terms.Alphabetical }}<a href="{{ .Page.RelPermalink }}"><span>{{ .Page.LinkTitle }}</span><span>{{ .Count }} {{ if eq .Count 1 }}article{{ else }}articles{{ end }} ↗</span></a>{{ end }}</div>{{ else }}<section class="archive">{{ range .Pages }}{{ partial "post-row.html" . }}{{ else }}<p>No articles here yet. <a href="{{ "posts/" | relURL }}">Browse all writing →</a></p>{{ end }}</section>{{ end }}
+{{ end }}
